@@ -4,7 +4,7 @@ export const UserRoles = {
     MEMBER: "member"
 }
 
-export const AvailableUserRole = Object.values(UserRoles)
+export const AvailableUserRole = Object.values(UserRoles);
 
 export const TaskStatus = {
     TODO: "todo",
@@ -12,4 +12,4 @@ export const TaskStatus = {
     DONE: "done"
 }
 
-export const AvailableTaskStatus = Object.values(TaskStatus)
+export const AvailableTaskStatus = Object.values(TaskStatus);
