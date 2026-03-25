@@ -76,7 +76,6 @@ const forgotPasswordContent = (username, verificationUrl) => {
     };
 }
 
-
 export {
     emailVerificationContent, 
     forgotPasswordContent,

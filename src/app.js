@@ -1,6 +1,6 @@
 import express from "express"
 import cors from "cors"
-
+import cookieParser from "cookie-parser"
 
 const app = express();
 
@@ -12,6 +12,8 @@ app.use(express.urlencoded({
     limit: "16kb"
 }))
 app.use(express.static("public"))
+app.use(cookieParser())
+
 // Cors
 app.use(cors({
     origin: process.env.CORS_ORIGIN?.split(",") || "http://localhost:5173",
@@ -19,7 +21,6 @@ app.use(cors({
     methods: ["GET","POST","PUT","PATCH","DELETE","OPTIONS"],
     allowedHeaders: ["Content-Type","Authorization"]
 }))
-
 
 // Route Setup
 import healthCheckRoute from "./routes/healthcheck.routes.js";
